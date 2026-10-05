@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A focused project workspace for planning, tracking, and shipping great work."
+    />
+    <title>Monday Studio — Project board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell" id="app">
+      <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#overview" aria-label="Monday Studio home">
+          <span class="brand-mark" aria-hidden="true">m</span>
+          <span class="brand-name">monday<span>studio</span></span>
+        </a>
+
+        <div class="workspace-switcher">
+          <span class="workspace-avatar" aria-hidden="true">S</span>
+          <span class="workspace-copy">
+            <span class="eyebrow">Workspace</span>
+            <strong>Studio North</strong>
+          </span>
+          <span class="switcher-chevron" aria-hidden="true">⌄</span>
+        </div>
+
+        <nav class="primary-nav" aria-label="Workspace">
+          <p class="nav-heading">Workspace</p>
+          <a class="nav-link" href="#overview">
+            <span class="nav-icon nav-icon-grid" aria-hidden="true"></span>
+            Overview
+          </a>
+          <a class="nav-link is-active" href="#board" aria-current="page">
+            <span class="nav-icon nav-icon-board" aria-hidden="true"></span>
+            My boards
+            <span class="nav-count">4</span>
+          </a>
+          <a class="nav-link" href="#inbox">
+            <span class="nav-icon nav-icon-inbox" aria-hidden="true"></span>
+            Inbox
+            <span class="inbox-dot" aria-label="Unread messages"></span>
+          </a>
+          <a class="nav-link" href="#calendar">
+            <span class="nav-icon nav-icon-calendar" aria-hidden="true"></span>
+            Calendar
+          </a>
+
+          <div class="nav-section-heading">
+            <p class="nav-heading">Your projects</p>
+            <a class="icon-button add-project-button" href="#new-project" aria-label="Add project">+</a>
+          </div>
+          <a class="project-link" href="#brand-refresh">
+            <span class="project-dot project-dot-lilac"></span>
+            Brand refresh
+          </a>
+          <a class="project-link is-selected" href="#spring-campaign">
+            <span class="project-dot project-dot-coral"></span>
+            Spring campaign
+          </a>
+          <a class="project-link" href="#website-v2">
+            <span class="project-dot project-dot-green"></span>
+            Website v2
+          </a>
+          <a class="project-link" href="#product-launch">
+            <span class="project-dot project-dot-yellow"></span>
+            Product launch
+          </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="upgrade-card">
+            <span class="upgrade-spark" aria-hidden="true">✳</span>
+            <strong>Make room for big ideas.</strong>
+            <p>Your team is doing great work. Give it a little more space.</p>
+            <a href="#plans">Explore plans <span aria-hidden="true">↗</span></a>
+          </div>
+          <a class="profile-link" href="#profile">
+            <span class="profile-avatar" aria-hidden="true">AM</span>
+            <span class="profile-copy">
+              <strong>Alex Morgan</strong>
+              <span>Team admin</span>
+            </span>
+            <span class="profile-menu" aria-hidden="true">···</span>
+          </a>
+        </div>
+      </aside>
+
+      <main class="main-content" id="overview">
+        <header class="topbar">
+          <div class="breadcrumb" aria-label="Breadcrumb">
+            <span>Projects</span>
+            <span class="breadcrumb-divider" aria-hidden="true">/</span>
+            <strong>Spring campaign</strong>
+          </div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <span class="search-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Search anything</span>
+              <input type="search" placeholder="Search anything..." />
+              <kbd>⌘ K</kbd>
+            </label>
+            <a class="icon-button help-button" href="#help" aria-label="Help and support">?</a>
+            <a class="topbar-avatar" href="#profile" aria-label="Alex Morgan's profile">AM</a>
+          </div>
+        </header>
+
+        <section class="board-page" id="board" aria-labelledby="board-title">
+          <div class="board-heading">
+            <div class="board-title-group">
+              <div class="title-kicker"><span></span> Q2 / 2025</div>
+              <div class="title-row">
+                <h1 id="board-title">Spring campaign</h1>
+                <button class="title-more" type="button" aria-label="Board options">···</button>
+              </div>
+              <p class="board-description">A little sunshine, a lot of good work. Let’s make this one count.</p>
+            </div>
+            <div class="board-heading-actions">
+              <div class="avatar-stack" aria-label="Board members: Alex Morgan, Jamie Lee, Sam Rivera">
+                <span class="member-avatar member-peach" title="Alex Morgan">AM</span>
+                <span class="member-avatar member-blue" title="Jamie Lee">JL</span>
+                <span class="member-avatar member-lilac" title="Sam Rivera">SR</span>
+                <span class="member-overflow">+2</span>
+              </div>
+              <button class="share-button" type="button">
+                <span class="share-icon" aria-hidden="true">↗</span>
+                Share
+              </button>
+            </div>
+          </div>
+
+          <div class="board-toolbar">
+            <div class="board-tabs" role="tablist" aria-label="Board views">
+              <a class="board-tab is-current" href="#board" role="tab" aria-selected="true">
+                <span class="tab-board-icon" aria-hidden="true"></span>
+                Board
+              </a>
+              <a class="board-tab" href="#timeline" role="tab" aria-selected="false">
+                <span class="tab-timeline-icon" aria-hidden="true"></span>
+                Timeline
+              </a>
+              <a class="board-tab" href="#files" role="tab" aria-selected="false">
+                <span class="tab-files-icon" aria-hidden="true"></span>
+                Files
+              </a>
+              <a class="add-view" href="#add-view" aria-label="Add a view">+</a>
+            </div>
+            <div class="board-tools">
+              <button class="tool-button" type="button">
+                <span class="filter-icon" aria-hidden="true"></span>
+                Filter
+              </button>
+              <button class="tool-button" type="button">
+                <span class="sort-icon" aria-hidden="true">↕</span>
+                Sort
+              </button>
+              <button class="tool-button people-tool" type="button" aria-label="People">
+                <span class="people-icon" aria-hidden="true">♧</span>
+              </button>
+              <button class="new-task-button" type="button"><span>+</span> New task</button>
+            </div>
+          </div>
+
+          <div class="board-canvas" aria-label="Spring campaign task board">
+            <section class="task-column column-backlog" aria-labelledby="backlog-title">
+              <header class="column-header">
+                <div class="column-name-wrap">
+                  <span class="column-indicator"></span>
+                  <h2 id="backlog-title">Up next</h2>
+                  <span class="task-count">3</span>
+                </div>
+                <button class="column-menu" type="button" aria-label="Up next column options">···</button>
+              </header>
+              <div class="task-list">
+                <article class="task-card card-peach">
+                  <div class="task-card-top">
+                    <span class="task-label label-content">Content</span>
+                    <button class="card-menu" type="button" aria-label="More options for Write launch story">···</button>
+                  </div>
+                  <h3>Write the launch story</h3>
+                  <p class="task-description">Find the thread that makes this feel like spring.</p>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 18</span>
+                    <span class="member-avatar member-blue" title="Jamie Lee">JL</span>
+                  </div>
+                </article>
+                <article class="task-card card-lilac">
+                  <div class="task-card-top">
+                    <span class="task-label label-design">Design</span>
+                    <button class="card-menu" type="button" aria-label="More options for Create moodboard">···</button>
+                  </div>
+                  <h3>Create a moodboard</h3>
+                  <p class="task-description">Color, texture, and a few unexpected details.</p>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 19</span>
+                    <span class="member-avatar member-lilac" title="Sam Rivera">SR</span>
+                  </div>
+                </article>
+                <article class="task-card card-green">
+                  <div class="task-card-top">
+                    <span class="task-label label-research">Research</span>
+                    <button class="card-menu" type="button" aria-label="More options for Gather references">···</button>
+                  </div>
+                  <h3>Gather campaign references</h3>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 21</span>
+                    <span class="member-avatar member-peach" title="Alex Morgan">AM</span>
+                  </div>
+                </article>
+              </div>
+              <a class="add-task-link" href="#new-task"><span>+</span> Add a task</a>
+            </section>
+
+            <section class="task-column column-progress" aria-labelledby="progress-title">
+              <header class="column-header">
+                <div class="column-name-wrap">
+                  <span class="column-indicator"></span>
+                  <h2 id="progress-title">In the works</h2>
+                  <span class="task-count">2</span>
+                </div>
+                <button class="column-menu" type="button" aria-label="In the works column options">···</button>
+              </header>
+              <div class="task-list">
+                <article class="task-card card-white">
+                  <div class="task-card-top">
+                    <span class="task-label label-content">Content</span>
+                    <button class="card-menu" type="button" aria-label="More options for Email sequence">···</button>
+                  </div>
+                  <h3>Draft the email sequence</h3>
+                  <p class="task-description">Three notes from us, timed just right.</p>
+                  <div class="progress-track" aria-label="Task 65% complete"><span style="width: 65%"></span></div>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 16</span>
+                    <span class="member-avatar member-peach" title="Alex Morgan">AM</span>
+                  </div>
+                </article>
+                <article class="task-card card-white">
+                  <div class="task-card-top">
+                    <span class="task-label label-design">Design</span>
+                    <button class="card-menu" type="button" aria-label="More options for Social templates">···</button>
+                  </div>
+                  <h3>Social templates</h3>
+                  <div class="attachment-preview">
+                    <span class="preview-shape preview-sun"></span>
+                    <span class="preview-shape preview-arch"></span>
+                    <span class="preview-shape preview-flower">✳</span>
+                    <span class="preview-caption">A glimpse of the season</span>
+                  </div>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 17</span>
+                    <span class="member-avatar member-blue" title="Jamie Lee">JL</span>
+                  </div>
+                </article>
+              </div>
+              <a class="add-task-link" href="#new-task"><span>+</span> Add a task</a>
+            </section>
+
+            <section class="task-column column-review" aria-labelledby="review-title">
+              <header class="column-header">
+                <div class="column-name-wrap">
+                  <span class="column-indicator"></span>
+                  <h2 id="review-title">Needs a look</h2>
+                  <span class="task-count">2</span>
+                </div>
+                <button class="column-menu" type="button" aria-label="Needs a look column options">···</button>
+              </header>
+              <div class="task-list">
+                <article class="task-card card-white">
+                  <div class="task-card-top">
+                    <span class="task-label label-strategy">Strategy</span>
+                    <button class="card-menu" type="button" aria-label="More options for Campaign concept">···</button>
+                  </div>
+                  <h3>Campaign concept</h3>
+                  <p class="task-description">“A brighter kind of everyday.”</p>
+                  <div class="review-note">
+                    <span class="review-avatar">TL</span>
+                    <span>Looks lovely — one tiny note...</span>
+                  </div>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 15</span>
+                    <span class="member-avatar member-lilac" title="Sam Rivera">SR</span>
+                  </div>
+                </article>
+                <article class="task-card card-white">
+                  <div class="task-card-top">
+                    <span class="task-label label-design">Design</span>
+                    <button class="card-menu" type="button" aria-label="More options for Landing page wireframe">···</button>
+                  </div>
+                  <h3>Landing page wireframe</h3>
+                  <div class="wireframe-preview" aria-label="Wireframe preview">
+                    <span></span><span></span><span></span><span></span>
+                  </div>
+                  <div class="task-card-footer">
+                    <span class="task-date"><span aria-hidden="true">◷</span> Apr 15</span>
+                    <span class="member-avatar member-blue" title="Jamie Lee">JL</span>
+                  </div>
+                </article>
+              </div>
+              <a class="add-task-link" href="#new-task"><span>+</span> Add a task</a>
+            </section>
+
+            <section class="task-column column-done" aria-labelledby="done-title">
+              <header class="column-header">
+                <div class="column-name-wrap">
+                  <span class="column-indicator"></span>
+                  <h2 id="done-title">All wrapped up</h2>
+                  <span class="task-count">2</span>
+                </div>
+                <button class="column-menu" type="button" aria-label="All wrapped up column options">···</button>
+              </header>
+              <div class="task-list">
+                <article class="task-card card-white task-complete">
+                  <div class="task-card-top">
+                    <span class="task-label label-strategy">Strategy</span>
+                    <button class="card-menu" type="button" aria-label="More options for Audience snapshot">···</button>
+                  </div>
+                  <h3>Audience snapshot</h3>
+                  <div class="task-card-footer">
+                    <span class="completed-note"><span aria-hidden="true">✓</span> Done Apr 10</span>
+                    <span class="member-avatar member-peach" title="Alex Morgan">AM</span>
+                  </div>
+                </article>
+                <article class="task-card card-white task-complete">
+                  <div class="task-card-top">
+                    <span class="task-label label-research">Research</span>
+                    <button class="card-menu" type="button" aria-label="More options for Competitor scan">···</button>
+                  </div>
+                  <h3>Competitor scan</h3>
+                  <div class="task-card-footer">
+                    <span class="completed-note"><span aria-hidden="true">✓</span> Done Apr 11</span>
+                    <span class="member-avatar member-lilac" title="Sam Rivera">SR</span>
+                  </div>
+                </article>
+              </div>
+              <a class="add-task-link" href="#new-task"><span>+</span> Add a task</a>
+            </section>
+
+            <a class="add-column" href="#new-column"><span>+</span> Add a group</a>
+          </div>
+
+          <footer class="board-footer">
+            <span><span class="footer-spark" aria-hidden="true">✳</span> A good plan leaves room for a little magic.</span>
+            <span>Last updated just now</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
